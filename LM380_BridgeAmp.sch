@@ -1,0 +1,652 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "LM380 - Bridge Amplifier"
+Date "2021-04-18"
+Rev "v01"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 "Author: Graeme Thompson"
+$EndDescr
+$Comp
+L Amplifier_Audio:LM380N-8 U1
+U 1 1 607E83A3
+P 8500 1650
+F 0 "U1" H 8844 1696 50  0000 L CNN
+F 1 "LM380N-8" H 8844 1605 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 8500 1650 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm380.pdf" H 8500 1650 50  0001 C CNN
+	1    8500 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 607ED4D1
+P 7600 1900
+F 0 "R3" V 7393 1900 50  0000 C CNN
+F 1 "470k" V 7484 1900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 7530 1900 50  0001 C CNN
+F 3 "~" H 7600 1900 50  0001 C CNN
+	1    7600 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 607EE251
+P 7600 2350
+F 0 "C4" V 7348 2350 50  0000 C CNN
+F 1 "100p" V 7439 2350 50  0000 C CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 7638 2200 50  0001 C CNN
+F 3 "~" H 7600 2350 50  0001 C CNN
+	1    7600 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP1 C3
+U 1 1 607EEC2C
+P 7100 2350
+F 0 "C3" V 6848 2350 50  0000 C CNN
+F 1 "10u" V 6939 2350 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 7100 2350 50  0001 C CNN
+F 3 "~" H 7100 2350 50  0001 C CNN
+	1    7100 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 607EF772
+P 6600 2350
+F 0 "R2" V 6393 2350 50  0000 C CNN
+F 1 "100k" V 6484 2350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 6530 2350 50  0001 C CNN
+F 3 "~" H 6600 2350 50  0001 C CNN
+	1    6600 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP1 C5
+U 1 1 607F053B
+P 8750 1000
+F 0 "C5" V 9002 1000 50  0000 C CNN
+F 1 "10u" V 8911 1000 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 8750 1000 50  0001 C CNN
+F 3 "~" H 8750 1000 50  0001 C CNN
+	1    8750 1000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8400 1950 8400 2000
+Wire Wire Line
+	8400 2000 8450 2000
+Wire Wire Line
+	8500 2000 8500 1950
+$Comp
+L power:GND #PWR012
+U 1 1 607F38D3
+P 8450 2000
+F 0 "#PWR012" H 8450 1750 50  0001 C CNN
+F 1 "GND" H 8455 1827 50  0000 C CNN
+F 2 "" H 8450 2000 50  0001 C CNN
+F 3 "" H 8450 2000 50  0001 C CNN
+	1    8450 2000
+	1    0    0    -1  
+$EndComp
+Connection ~ 8450 2000
+Wire Wire Line
+	8450 2000 8500 2000
+Wire Wire Line
+	8400 3350 8400 3400
+Wire Wire Line
+	8400 3400 8450 3400
+Wire Wire Line
+	8500 3400 8500 3350
+$Comp
+L power:GND #PWR013
+U 1 1 607F3E1B
+P 8450 3400
+F 0 "#PWR013" H 8450 3150 50  0001 C CNN
+F 1 "GND" H 8455 3227 50  0000 C CNN
+F 2 "" H 8450 3400 50  0001 C CNN
+F 3 "" H 8450 3400 50  0001 C CNN
+	1    8450 3400
+	1    0    0    -1  
+$EndComp
+Connection ~ 8450 3400
+Wire Wire Line
+	8450 3400 8500 3400
+$Comp
+L Device:R R4
+U 1 1 607F4612
+P 9400 2300
+F 0 "R4" H 9470 2346 50  0000 L CNN
+F 1 "2.2k" H 9470 2255 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9330 2300 50  0001 C CNN
+F 3 "~" H 9400 2300 50  0001 C CNN
+	1    9400 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 607F596C
+P 9800 2050
+F 0 "R5" H 9870 2096 50  0000 L CNN
+F 1 "10" H 9870 2005 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 9730 2050 50  0001 C CNN
+F 3 "~" H 9800 2050 50  0001 C CNN
+	1    9800 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 607F627D
+P 9800 2500
+F 0 "C7" H 9915 2546 50  0000 L CNN
+F 1 "0.1u" H 9915 2455 50  0000 L CNN
+F 2 "Capacitor_THT:C_Axial_L5.1mm_D3.1mm_P10.00mm_Horizontal" H 9838 2350 50  0001 C CNN
+F 3 "~" H 9800 2500 50  0001 C CNN
+	1    9800 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Speaker LS1
+U 1 1 607F6A06
+P 10550 2300
+F 0 "LS1" H 10720 2296 50  0000 L CNN
+F 1 "Speaker" H 10720 2205 50  0000 L CNN
+F 2 "Connector_Wire:SolderWire-0.25sqmm_1x02_P4.2mm_D0.65mm_OD1.7mm" H 10550 2100 50  0001 C CNN
+F 3 "~" H 10540 2250 50  0001 C CNN
+	1    10550 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV1
+U 1 1 607FD55A
+P 6100 2350
+F 0 "RV1" H 6031 2396 50  0000 R CNN
+F 1 "100k" H 6031 2305 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_TT_P0915N" H 6100 2350 50  0001 C CNN
+F 3 "~" H 6100 2350 50  0001 C CNN
+	1    6100 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 3050 8800 3050
+Wire Wire Line
+	9400 2450 9400 3050
+Wire Wire Line
+	8800 1650 9800 1650
+Wire Wire Line
+	9800 1650 9800 1900
+Wire Wire Line
+	9800 2200 9800 2350
+Wire Wire Line
+	9800 1650 10350 1650
+Connection ~ 9800 1650
+Wire Wire Line
+	10350 2300 10350 1650
+$Comp
+L power:GND #PWR015
+U 1 1 60800F3B
+P 9000 2650
+F 0 "#PWR015" H 9000 2400 50  0001 C CNN
+F 1 "GND" H 9005 2477 50  0000 C CNN
+F 2 "" H 9000 2650 50  0001 C CNN
+F 3 "" H 9000 2650 50  0001 C CNN
+	1    9000 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C6
+U 1 1 607F1578
+P 8750 2550
+F 0 "C6" V 9002 2550 50  0000 C CNN
+F 1 "10u" V 8911 2550 50  0000 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm" H 8750 2550 50  0001 C CNN
+F 3 "~" H 8750 2550 50  0001 C CNN
+	1    8750 2550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Amplifier_Audio:LM380N-8 U2
+U 1 1 607EA2AB
+P 8500 3050
+F 0 "U2" H 8844 3096 50  0000 L CNN
+F 1 "LM380N-8" H 8844 3005 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 8500 3050 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm380.pdf" H 8500 3050 50  0001 C CNN
+	1    8500 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 2750 8500 2550
+Wire Wire Line
+	8500 2550 8600 2550
+Wire Wire Line
+	8900 2550 9000 2550
+Wire Wire Line
+	9000 2550 9000 2650
+$Comp
+L power:GND #PWR014
+U 1 1 608032F3
+P 9000 1100
+F 0 "#PWR014" H 9000 850 50  0001 C CNN
+F 1 "GND" H 9005 927 50  0000 C CNN
+F 2 "" H 9000 1100 50  0001 C CNN
+F 3 "" H 9000 1100 50  0001 C CNN
+	1    9000 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 1000 8600 1000
+Wire Wire Line
+	9000 1000 9000 1100
+Wire Wire Line
+	8500 1000 8500 1350
+Wire Wire Line
+	8900 1000 9000 1000
+Wire Wire Line
+	8500 1350 9400 1350
+Wire Wire Line
+	9400 1350 9400 2150
+Connection ~ 8500 1350
+$Comp
+L power:+15V #PWR010
+U 1 1 608091D7
+P 8400 1000
+F 0 "#PWR010" H 8400 850 50  0001 C CNN
+F 1 "+15V" H 8415 1173 50  0000 C CNN
+F 2 "" H 8400 1000 50  0001 C CNN
+F 3 "" H 8400 1000 50  0001 C CNN
+	1    8400 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+15V #PWR011
+U 1 1 60809B2D
+P 8400 2550
+F 0 "#PWR011" H 8400 2400 50  0001 C CNN
+F 1 "+15V" H 8415 2723 50  0000 C CNN
+F 2 "" H 8400 2550 50  0001 C CNN
+F 3 "" H 8400 2550 50  0001 C CNN
+	1    8400 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 2950 7850 2950
+Wire Wire Line
+	7850 1750 8200 1750
+Wire Wire Line
+	8200 3150 7350 3150
+Wire Wire Line
+	7350 1550 8200 1550
+Wire Wire Line
+	7350 1900 7450 1900
+Wire Wire Line
+	7750 1900 7850 1900
+Wire Wire Line
+	7350 2350 7450 2350
+Wire Wire Line
+	7750 2350 7850 2350
+Connection ~ 7350 2350
+Connection ~ 7850 2350
+Connection ~ 7350 1900
+Wire Wire Line
+	7350 1900 7350 1550
+Connection ~ 7850 1900
+Wire Wire Line
+	7850 1900 7850 1750
+Wire Wire Line
+	7350 1900 7350 2350
+Wire Wire Line
+	7850 1900 7850 2350
+Wire Wire Line
+	7350 3150 7350 2350
+Wire Wire Line
+	7850 2950 7850 2350
+Wire Wire Line
+	9800 2650 9800 3050
+Wire Wire Line
+	9800 3050 9400 3050
+Connection ~ 9400 3050
+Wire Wire Line
+	9800 3050 10350 3050
+Wire Wire Line
+	10350 3050 10350 2400
+Connection ~ 9800 3050
+Wire Wire Line
+	6250 2350 6450 2350
+Wire Wire Line
+	7250 2350 7350 2350
+Wire Wire Line
+	6750 2350 6950 2350
+$Comp
+L power:GND #PWR09
+U 1 1 608145A6
+P 6100 2650
+F 0 "#PWR09" H 6100 2400 50  0001 C CNN
+F 1 "GND" H 6105 2477 50  0000 C CNN
+F 2 "" H 6100 2650 50  0001 C CNN
+F 3 "" H 6100 2650 50  0001 C CNN
+	1    6100 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 2650 6100 2500
+Wire Wire Line
+	6100 2200 6100 1950
+$Comp
+L Connector:Barrel_Jack J1
+U 1 1 6081D1BE
+P 1400 1950
+F 0 "J1" H 1457 2275 50  0000 C CNN
+F 1 "Barrel_Jack" H 1457 2184 50  0000 C CNN
+F 2 "Connector_Wire:SolderWire-0.25sqmm_1x02_P4.2mm_D0.65mm_OD1.7mm" H 1450 1910 50  0001 C CNN
+F 3 "~" H 1450 1910 50  0001 C CNN
+	1    1400 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D1
+U 1 1 6081FA5D
+P 2550 2250
+F 0 "D1" V 2504 2330 50  0000 L CNN
+F 1 "IN5817" V 2595 2330 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 2550 2250 50  0001 C CNN
+F 3 "~" H 2550 2250 50  0001 C CNN
+	1    2550 2250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP1 C1
+U 1 1 60820B70
+P 3000 2250
+F 0 "C1" H 3115 2296 50  0000 L CNN
+F 1 "220u" H 3115 2205 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 3000 2250 50  0001 C CNN
+F 3 "~" H 3000 2250 50  0001 C CNN
+	1    3000 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 608213FE
+P 3450 2250
+F 0 "C2" H 3565 2296 50  0000 L CNN
+F 1 "10n" H 3565 2205 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 3488 2100 50  0001 C CNN
+F 3 "~" H 3450 2250 50  0001 C CNN
+	1    3450 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPDT SW1
+U 1 1 608240D3
+P 2100 1850
+F 0 "SW1" H 2100 2135 50  0000 C CNN
+F 1 "Power Switch" H 2100 2044 50  0000 C CNN
+F 2 "digikey-footprints:Toggle_Switch_100SP1T1B4M2QE" H 2100 1850 50  0001 C CNN
+F 3 "~" H 2100 1850 50  0001 C CNN
+	1    2100 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 608269D8
+P 3900 2250
+F 0 "R1" H 3970 2296 50  0000 L CNN
+F 1 "1k" H 3970 2205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 3830 2250 50  0001 C CNN
+F 3 "~" H 3900 2250 50  0001 C CNN
+	1    3900 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 6082718A
+P 3900 2700
+F 0 "D2" V 3939 2582 50  0000 R CNN
+F 1 "LED" V 3848 2582 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_Clear" H 3900 2700 50  0001 C CNN
+F 3 "~" H 3900 2700 50  0001 C CNN
+	1    3900 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 60827A38
+P 1800 2200
+F 0 "#PWR01" H 1800 1950 50  0001 C CNN
+F 1 "GND" H 1805 2027 50  0000 C CNN
+F 2 "" H 1800 2200 50  0001 C CNN
+F 3 "" H 1800 2200 50  0001 C CNN
+	1    1800 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 60828228
+P 2550 2550
+F 0 "#PWR04" H 2550 2300 50  0001 C CNN
+F 1 "GND" H 2555 2377 50  0000 C CNN
+F 2 "" H 2550 2550 50  0001 C CNN
+F 3 "" H 2550 2550 50  0001 C CNN
+	1    2550 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 60828553
+P 3000 2550
+F 0 "#PWR05" H 3000 2300 50  0001 C CNN
+F 1 "GND" H 3005 2377 50  0000 C CNN
+F 2 "" H 3000 2550 50  0001 C CNN
+F 3 "" H 3000 2550 50  0001 C CNN
+	1    3000 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 608287E9
+P 3450 2550
+F 0 "#PWR06" H 3450 2300 50  0001 C CNN
+F 1 "GND" H 3455 2377 50  0000 C CNN
+F 2 "" H 3450 2550 50  0001 C CNN
+F 3 "" H 3450 2550 50  0001 C CNN
+	1    3450 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 2050 1800 2050
+Wire Wire Line
+	2550 2400 2550 2550
+Wire Wire Line
+	3000 2400 3000 2550
+Wire Wire Line
+	3450 2400 3450 2550
+Wire Wire Line
+	3900 2400 3900 2550
+Wire Wire Line
+	2300 1950 2550 1950
+Wire Wire Line
+	2550 1950 2550 2100
+Connection ~ 2550 1950
+Wire Wire Line
+	2550 1950 3000 1950
+Wire Wire Line
+	3000 1950 3000 2100
+Connection ~ 3000 1950
+Wire Wire Line
+	3000 1950 3450 1950
+Wire Wire Line
+	3450 1950 3450 2100
+Connection ~ 3450 1950
+Wire Wire Line
+	3450 1950 3900 1950
+Wire Wire Line
+	3900 1950 3900 2100
+$Comp
+L power:+15V #PWR08
+U 1 1 6083AD47
+P 4250 1950
+F 0 "#PWR08" H 4250 1800 50  0001 C CNN
+F 1 "+15V" V 4265 2078 50  0000 L CNN
+F 2 "" H 4250 1950 50  0001 C CNN
+F 3 "" H 4250 1950 50  0001 C CNN
+	1    4250 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3900 1950 4100 1950
+Connection ~ 3900 1950
+Wire Wire Line
+	3550 6000 3800 6000
+Wire Wire Line
+	2950 5900 3150 5900
+Wire Wire Line
+	2950 5700 2950 5900
+Wire Wire Line
+	2350 5700 2950 5700
+Wire Wire Line
+	2550 6300 2550 6350
+Connection ~ 2550 6300
+Wire Wire Line
+	2950 6100 3150 6100
+Wire Wire Line
+	2950 6300 2950 6100
+Wire Wire Line
+	2550 6300 2950 6300
+Wire Wire Line
+	2350 6150 2450 6150
+Wire Wire Line
+	2350 5600 2450 5600
+$Comp
+L power:GND #PWR03
+U 1 1 608503D6
+P 2450 6150
+F 0 "#PWR03" H 2450 5900 50  0001 C CNN
+F 1 "GND" V 2455 6022 50  0000 R CNN
+F 2 "" H 2450 6150 50  0001 C CNN
+F 3 "" H 2450 6150 50  0001 C CNN
+	1    2450 6150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 6084F9F6
+P 2450 5600
+F 0 "#PWR02" H 2450 5350 50  0001 C CNN
+F 1 "GND" V 2455 5472 50  0000 R CNN
+F 2 "" H 2450 5600 50  0001 C CNN
+F 3 "" H 2450 5600 50  0001 C CNN
+	1    2450 5600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2550 6250 2550 6300
+Wire Wire Line
+	2350 6250 2550 6250
+Wire Wire Line
+	2350 6350 2550 6350
+$Comp
+L Switch:SW_SPDT SW2
+U 1 1 6083F73E
+P 3350 6000
+F 0 "SW2" H 3350 5675 50  0000 C CNN
+F 1 "Toggle Input" H 3350 5766 50  0000 C CNN
+F 2 "digikey-footprints:Toggle_Switch_100SP1T1B4M2QE" H 3350 6000 50  0001 C CNN
+F 3 "~" H 3350 6000 50  0001 C CNN
+	1    3350 6000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 60828A98
+P 3900 3200
+F 0 "#PWR07" H 3900 2950 50  0001 C CNN
+F 1 "GND" H 3905 3027 50  0000 C CNN
+F 2 "" H 3900 3200 50  0001 C CNN
+F 3 "" H 3900 3200 50  0001 C CNN
+	1    3900 3200
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	11200 4000 500  4000
+Wire Notes Line
+	5250 500  5250 7750
+Text Notes 600  4150 0    50   ~ 0
+Input
+Text Notes 600  650  0    50   ~ 0
+Power
+Text Notes 5400 650  0    50   ~ 0
+Amplifier
+NoConn ~ 2300 1750
+$Comp
+L Connector:Conn_01x03_Female J3
+U 1 1 60850CE5
+P 2150 6250
+F 0 "J3" H 2042 5925 50  0000 C CNN
+F 1 "3.5mm Audio" H 2042 6016 50  0000 C CNN
+F 2 "Connector_Wire:SolderWire-0.25sqmm_1x03_P4.2mm_D0.65mm_OD1.7mm" H 2150 6250 50  0001 C CNN
+F 3 "~" H 2150 6250 50  0001 C CNN
+	1    2150 6250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Female J2
+U 1 1 60853704
+P 2150 5700
+F 0 "J2" H 2042 5375 50  0000 C CNN
+F 1 "6.3mm Audio" H 2042 5466 50  0000 C CNN
+F 2 "Connector_Wire:SolderWire-0.25sqmm_1x02_P4.2mm_D0.65mm_OD1.7mm" H 2150 5700 50  0001 C CNN
+F 3 "~" H 2150 5700 50  0001 C CNN
+	1    2150 5700
+	-1   0    0    1   
+$EndComp
+Text Label 6100 1950 0    50   ~ 0
+IN
+Text Label 3800 6000 0    50   ~ 0
+IN
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 608B3164
+P 4100 1950
+F 0 "#FLG0101" H 4100 2025 50  0001 C CNN
+F 1 "PWR_FLAG" H 4100 2123 50  0000 C CNN
+F 2 "" H 4100 1950 50  0001 C CNN
+F 3 "~" H 4100 1950 50  0001 C CNN
+	1    4100 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 608B7CB4
+P 3900 3100
+F 0 "#FLG0103" H 3900 3175 50  0001 C CNN
+F 1 "PWR_FLAG" V 3900 3228 50  0000 L CNN
+F 2 "" H 3900 3100 50  0001 C CNN
+F 3 "~" H 3900 3100 50  0001 C CNN
+	1    3900 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8400 1000 8400 1350
+Connection ~ 4100 1950
+Wire Wire Line
+	4100 1950 4250 1950
+Wire Wire Line
+	1700 1850 1900 1850
+Wire Wire Line
+	8400 2550 8400 2750
+Wire Wire Line
+	1800 2050 1800 2200
+Wire Wire Line
+	3900 2850 3900 3100
+Connection ~ 3900 3100
+Wire Wire Line
+	3900 3100 3900 3200
+$EndSCHEMATC

@@ -1,0 +1,12 @@
+# bom
+bom/
+*.csv
+*.xlsx
+*.xml
+
+# backups
+*-bak
+
+# zips
+gerbers/*.zip
+images/*.zip
