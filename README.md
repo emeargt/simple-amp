@@ -1,5 +1,4 @@
 # simple-amp
-# Shutter Control Circuit
 This repository contains a KiCad project for a simple guitar bridge amplifier.
 
 The board is designed to fit in a stomp box with panel mount switches.
